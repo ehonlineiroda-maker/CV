@@ -371,8 +371,21 @@ function applyLanguage(lang) {
   document.querySelectorAll(".lang-flag").forEach((btn) => {
     btn.classList.toggle("is-active", btn.getAttribute("data-lang") === lang);
   });
-}
 
+  // --- PDF link dinamikus cseréje a nyelv alapján ---
+  const cvBtn = document.getElementById('cv-download-btn');
+  if (cvBtn) {
+    if (lang === 'de') {
+      cvBtn.href = 'assets/lebensl.pdf'; // Cseréld ki a fájlnevére, ha más
+      cvBtn.setAttribute('download', 'Hanzseros_Eszter_Lebenslauf.pdf');
+    } else if (lang === 'en') {
+      cvBtn.href = 'assets/CV-en.pdf';
+      cvBtn.setAttribute('download', 'Hanzseros_Eszter_CV.pdf');
+    } else {
+      cvBtn.href = 'assets/onelet.pdf';
+    }
+  }
+}
 document.querySelectorAll(".lang-flag").forEach((btn) => {
   btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
 });
