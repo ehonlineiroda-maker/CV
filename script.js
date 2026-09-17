@@ -396,7 +396,7 @@ document.querySelectorAll(".lang-flag").forEach((btn) => {
    ------------------------------------------------------------------------ */
 
 // ==> MAKE.COM: illessze be ide a "Webhooks -> Custom webhook" modul URL-jét.
-const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/YOUR_WEBHOOK_ID_HERE";
+const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/lcdmjwgmd4punwk6nkw9vl1e3e3x869g";
 
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
