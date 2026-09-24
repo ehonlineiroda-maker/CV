@@ -334,12 +334,14 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 500; lett
 .expertise__grid {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1px;
   background: var(--line-light);
   border: 1px solid var(--line-light);
   border-radius: var(--radius-m);
   overflow: hidden;
+  max-width: 1250px;
+  width: 100%;
 }
 .expertise__card { background: var(--navy); padding: 32px 24px; }
 .expertise__icon { color: var(--gold-light); width: 32px; height: 32px; margin-bottom: 20px; }
