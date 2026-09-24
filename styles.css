@@ -358,7 +358,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 500; lett
   gap: 5px;
   border-radius: var(--radius-m);
   overflow: hidden;
-  max-width: 1350px;
+  max-width: 1450px;
   width: 100%;
 }
 .project-card {
