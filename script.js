@@ -97,6 +97,7 @@ const translations = {
     "projects.p3desc": "Foglalási rendszerrel ellátott szálláshely-oldal",
     "projects.p4desc": "Könyvelési folymatok támogatása potnos, naprakész adminisztráció biztosításával",
     "projects.p5desc": "Esemény- és landing oldalak vállalkozásoknak és magánszemélyeknek",
+    "projects.p6desc": "Otthoni és kerti feladatok széles köre, profi szakemberekkel - Bemutatkozó oldal",
 
     "skills.eyebrow": "Képességek",
     "skills.title": "Eszköztáram a hatékony munkához",
@@ -203,6 +204,8 @@ const translations = {
     "projects.p3desc": "Unterkunfts-Website mit Buchungssystem",
     "projects.p4desc": "Unterstützung von Buchhaltungsprozessen durch Gewährleistung einer präzisen, aktuellen Administration.",
     "projects.p5desc": "Event- und Landingpages für Privatpersonen und Unternehmen",
+    "projects.p6desc": "Vielfältige Aufgaben rund um Haus und Garten mit Profis – Landing Page",
+
 
     "skills.eyebrow": "Fähigkeiten",
     "skills.title": "Mein Werkzeugkasten für effizientes Arbeiten",
@@ -309,6 +312,8 @@ const translations = {
     "projects.p3desc": "Accommodation website with a booking system",
     "projects.p4desc": "Supporting accounting processes by ensuring accurate, up-to-date administration.",
     "projects.p5desc": "Event and landing pages for individuals and businesses",
+    "projects.p6desc": "Wide range of home and garden tasks with professional experts – Landing Page",
+
 
     "skills.eyebrow": "Skills",
     "skills.title": "My toolkit for effective work",
