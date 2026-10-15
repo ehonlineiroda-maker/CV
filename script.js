@@ -23,11 +23,7 @@ navLinks.querySelectorAll("a").forEach((link) => {
 });
 
 /* ------------------------------------------------------------------------
-   2) NYELVVÁLTÁS — Magyar / Német
-   Minden szöveg a "translations" szótárban van; a HTML elemeken lévő
-   data-i18n="kulcs" attribútum alapján cserélődik a textContent,
-   a data-i18n-html="kulcs" attribútum alapján pedig az innerHTML
-   (ez utóbbi a formázott, több bekezdéses szövegeknél kell).
+   2) NYELVVÁLTÁS — Magyar / Német / Angol
    ------------------------------------------------------------------------ */
 const translations = {
   hu: {
@@ -56,7 +52,6 @@ const translations = {
       <p>2018-ban fordultam a digitális megoldások és az e-kereskedelem világa felé. Azóta folyamatosan képzem magam webdesign, webfejlesztés és online marketing témákban, és mára olyan komplex szemléletet alakítottam ki, amelyben a logisztika, az üzleti adminisztráció és a digitális rendszerek egymást erősítve működnek.</p>
       <p>Fő erősségem, hogy átlátom az üzleti folyamatokat, képes vagyok azokat hatékony digitális megoldásokkal támogatni, és a megvalósítást az elejétől a végéig kézben tartani.</p>
       <p>Projektjeim során weboldalakat és webáruházakat építek, online rendszereket állítok fel, adminisztrációs és asszisztensi hátteret tartok kézben, foglalási és e-commerce feladatokat szervezek, valamint marketing- és közösségi média kommunikációt kezelek.</p>
-
     `,
     "about.studiesEyebrow": "Tanulmányok",
     "about.studiesList": `
@@ -97,7 +92,6 @@ const translations = {
     "projects.p3desc": "Foglalási rendszerrel ellátott szálláshely-oldal",
     "projects.p4desc": "Könyvelési folymatok támogatása potnos, naprakész adminisztráció biztosításával",
     "projects.p5desc": "Esemény- és landing oldalak vállalkozásoknak és magánszemélyeknek",
-    "projects.p6desc": "Otthoni és kerti feladatok széles köre, profi szakemberekkel - Bemutatkozó oldal",
 
     "skills.eyebrow": "Képességek",
     "skills.title": "Eszköztáram a hatékony munkához",
@@ -124,6 +118,7 @@ const translations = {
     "contact.formName": "Név",
     "contact.formEmail": "E-mail cím",
     "contact.formPhone": "Telefonszám (opcionális)",
+    "contact.phone": "+36 30 327 5783",
     "contact.formSubject": "Tárgy",
     "contact.formMessage": "Üzenet",
     "contact.formSubmit": "Üzenet küldése",
@@ -163,7 +158,6 @@ const translations = {
       <p>2018 wandte ich mich der Welt der digitalen Lösungen und des E-Commerce zu. Seitdem bilde ich mich laufend in Webdesign, Webentwicklung und Online-Marketing weiter und habe eine ganzheitliche Herangehensweise entwickelt, bei der sich Logistik, Unternehmensadministration und digitale Systeme gegenseitig stärken.</p>
       <p>Meine größte Stärke ist es, Geschäftsprozesse zu durchdringen, sie mit wirksamen digitalen Lösungen zu unterstützen und die Umsetzung von Anfang bis Ende selbst in der Hand zu behalten.</p>
       <p>Im Rahmen meiner Projekte baue ich Websites und Onlineshops auf, richte Onlinesysteme ein, übernehme die administrative und assistierende Betreuung, koordiniere Buchungs- und E-Commerce-Prozesse und steuere die Marketing- und Social-Media-Kommunikation.</p>
-
     `,
     "about.studiesEyebrow": "Ausbildung",
     "about.studiesList": `
@@ -204,8 +198,6 @@ const translations = {
     "projects.p3desc": "Unterkunfts-Website mit Buchungssystem",
     "projects.p4desc": "Unterstützung von Buchhaltungsprozessen durch Gewährleistung einer präzisen, aktuellen Administration.",
     "projects.p5desc": "Event- und Landingpages für Privatpersonen und Unternehmen",
-    "projects.p6desc": "Vielfältige Aufgaben rund um Haus und Garten mit Profis – Landing Page",
-
 
     "skills.eyebrow": "Fähigkeiten",
     "skills.title": "Mein Werkzeugkasten für effizientes Arbeiten",
@@ -232,6 +224,7 @@ const translations = {
     "contact.formName": "Name",
     "contact.formEmail": "E-Mail-Adresse",
     "contact.formPhone": "Telefonnummer (optional)",
+    "contact.phone": "+43 676 64 31 150",
     "contact.formSubject": "Betreff",
     "contact.formMessage": "Nachricht",
     "contact.formSubmit": "Nachricht senden",
@@ -271,7 +264,6 @@ const translations = {
       <p>In 2018 I turned toward digital solutions and e-commerce. Since then I have continuously trained myself in web design, web development and online marketing, and I've developed a holistic approach in which logistics, business administration and digital systems reinforce one another.</p>
       <p>My core strength is that I understand business processes end to end, can support them with effective digital solutions, and can own the implementation from start to finish.</p>
       <p>In my projects, I build websites and online stores, set up online systems, oversee administrative and assistant operations, manage booking and e-commerce workflows, and handle marketing and social media communication.</p>
-
     `,
     "about.studiesEyebrow": "Education",
     "about.studiesList": `
@@ -312,8 +304,6 @@ const translations = {
     "projects.p3desc": "Accommodation website with a booking system",
     "projects.p4desc": "Supporting accounting processes by ensuring accurate, up-to-date administration.",
     "projects.p5desc": "Event and landing pages for individuals and businesses",
-    "projects.p6desc": "Wide range of home and garden tasks with professional experts – Landing Page",
-
 
     "skills.eyebrow": "Skills",
     "skills.title": "My toolkit for effective work",
@@ -340,6 +330,7 @@ const translations = {
     "contact.formName": "Name",
     "contact.formEmail": "Email address",
     "contact.formPhone": "Phone number (optional)",
+    "contact.phone": "+43 676 64 31 150",
     "contact.formSubject": "Subject",
     "contact.formMessage": "Message",
     "contact.formSubmit": "Send message",
@@ -381,27 +372,39 @@ function applyLanguage(lang) {
   const cvBtn = document.getElementById('cv-download-btn');
   if (cvBtn) {
     if (lang === 'de') {
-      cvBtn.href = 'assets/lebensl.pdf'; // Cseréld ki a fájlnevére, ha más
+      cvBtn.href = 'assets/lebensl.pdf';
       cvBtn.setAttribute('download', 'Hanzseros_Eszter_Lebenslauf.pdf');
     } else if (lang === 'en') {
-      cvBtn.href = 'assets/lebensl.pdf';
+      cvBtn.href = 'assets/CV-en.pdf';
       cvBtn.setAttribute('download', 'Hanzseros_Eszter_CV.pdf');
     } else {
       cvBtn.href = 'assets/onelet.pdf';
     }
   }
+
+  // --- Telefonszám és tel: link dinamikus cseréje a nyelv alapján ---
+  const phoneLink = document.getElementById('contactPhoneLink');
+  if (phoneLink) {
+    if (lang === 'de' || lang === 'en') {
+      phoneLink.href = 'tel:+436766431150';
+      const phoneTextSpan = phoneLink.querySelector('[data-i18n="contact.phone"]');
+      if (phoneTextSpan) phoneTextSpan.textContent = '+43 676 64 31 150';
+    } else {
+      phoneLink.href = 'tel:+36303275783';
+      const phoneTextSpan = phoneLink.querySelector('[data-i18n="contact.phone"]');
+      if (phoneTextSpan) phoneTextSpan.textContent = '+36 30 327 5783';
+    }
+  }
 }
+
 document.querySelectorAll(".lang-flag").forEach((btn) => {
   btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
 });
 
 /* ------------------------------------------------------------------------
    3) KAPCSOLATFELVÉTELI ŰRLAP
-   Az űrlap beküldéskor JSON-t POST-ol a Make.com webhookra.
    ------------------------------------------------------------------------ */
-
-// ==> MAKE.COM: illessze be ide a "Webhooks -> Custom webhook" modul URL-jét.
-const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/lcdmjwgmd4punwk6nkw9vl1e3e3x869g";
+const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/YOUR_WEBHOOK_ID_HERE";
 
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
@@ -431,7 +434,6 @@ contactForm.addEventListener("submit", async (e) => {
   formStatus.className = "form-status";
 
   try {
-    // Ha a MAKE_WEBHOOK_URL még nincs kitöltve, csak szimulálja a sikeres küldést.
     if (MAKE_WEBHOOK_URL.includes("YOUR_WEBHOOK_ID_HERE")) {
       throw new Error("NO_WEBHOOK_CONFIGURED");
     }
@@ -448,8 +450,6 @@ contactForm.addEventListener("submit", async (e) => {
     formStatus.className = "form-status is-success";
     contactForm.reset();
   } catch (err) {
-    // Amíg a Make.com webhook nincs beállítva, ez az ág fut le -
-    // erre való a mailto: fallback linkje a fejlesztő számára.
     console.warn("Kapcsolati űrlap: a Make.com webhook URL nincs beállítva a script.js fájlban.", err);
     formStatus.textContent = translations[currentLang]["contact.error"];
     formStatus.className = "form-status is-error";
