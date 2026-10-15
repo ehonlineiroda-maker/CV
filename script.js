@@ -375,7 +375,7 @@ function applyLanguage(lang) {
       cvBtn.href = 'assets/lebensl.pdf';
       cvBtn.setAttribute('download', 'Hanzseros_Eszter_Lebenslauf.pdf');
     } else if (lang === 'en') {
-      cvBtn.href = 'assets/CV-en.pdf';
+      cvBtn.href = 'assets/cv.pdf';
       cvBtn.setAttribute('download', 'Hanzseros_Eszter_CV.pdf');
     } else {
       cvBtn.href = 'assets/onelet.pdf';
